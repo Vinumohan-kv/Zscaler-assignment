@@ -6,7 +6,7 @@
 web/core
 vendor/
 web/sites/*/settings.*.php
-web/sites/*/services*.yml
+#web/sites/*/services*.yml
 web/sites/*/files
 web/sites/*/private
 web/sites/simpletest
