@@ -1,0 +1,18 @@
+uuid: d910eb65-0336-48fc-a58a-8f2d064cf3c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: UHD
+type: uhd
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

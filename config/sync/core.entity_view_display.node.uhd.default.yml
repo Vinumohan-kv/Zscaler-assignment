@@ -1,0 +1,28 @@
+uuid: 9f8ddb2f-81d1-4c2b-a338-43984cff30ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.uhd.body
+    - node.type.uhd
+  module:
+    - text
+    - user
+id: node.uhd.default
+targetEntityType: node
+bundle: uhd
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

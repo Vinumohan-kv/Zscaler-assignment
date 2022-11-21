@@ -1,0 +1,23 @@
+uuid: 37389762-2fcb-4efd-a26a-3bdec7cb88ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.zscaler
+  module:
+    - text
+id: node.zscaler.body
+field_name: body
+entity_type: node
+bundle: zscaler
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,30 @@
+uuid: 0ce3428a-0c7a-4ad5-8490-a790c2833400
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.zscaler.body
+    - node.type.zscaler
+  module:
+    - text
+    - user
+id: node.zscaler.teaser
+targetEntityType: node
+bundle: zscaler
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

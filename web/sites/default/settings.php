@@ -249,7 +249,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'QaY6Dup7qOqfmQO5kPyOPhX4lxVXbENdi--T9FRLLBb4YN4Xz48mNENdZ9NN4uh2wGMMjG9QAA';
+$settings['hash_salt'] = 'JN8Zsn_k_gEPIvn-8T5uqbNoYB4q9IHJdIU1M62lCcydWiL5Je5gvf0Atb8k6gALWmMcMT-lgg';
 
 /**
  * Deployment identifier.
@@ -488,7 +488,7 @@ $settings['update_free_access'] = FALSE;
  * must exist and be writable by Drupal. This directory must be relative to
  * the Drupal installation directory and be accessible over the web.
  */
- $settings['file_public_path'] = 'sites/default/files';
+# $settings['file_public_path'] = 'sites/default/files';
 
 /**
  * Additional public file schemes:
@@ -795,7 +795,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'zscaler',
+  'database' => 'd948',
   'username' => 'root',
   'password' => '',
   'prefix' => '',

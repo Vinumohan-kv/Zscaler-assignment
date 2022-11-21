@@ -1,0 +1,9 @@
+zscaler_custom.zscform_form:
+  path: '/admin/zscform'
+  defaults:
+    _form: '\Drupal\zscaler_custom\Form\ZscCustomForm'
+    _title: 'Zscaler Custom Form'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

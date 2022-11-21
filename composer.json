@@ -17,8 +17,9 @@
     "require": {
         "composer/installers": "^1.9",
         "drupal/core-composer-scaffold": "^9.4",
+        "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
-        "drupal/pathauto": "^1.11",
+        "drupal/jsonapi_extras": "^3.22",
         "drush/drush": "^11.3"
     },
     "conflict": {
@@ -30,6 +31,7 @@
         "allow-plugins": {
             "composer/installers": true,
             "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
             "dealerdirect/phpcodesniffer-composer-installer": true
         },
         "sort-packages": true

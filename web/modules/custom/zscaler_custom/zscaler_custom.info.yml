@@ -1,0 +1,6 @@
+name: 'Zscaler Custom'
+package: custom
+type: module
+core_version_requirement: ^8 | ^9
+description: "Zscaler custom logics"
+version: 9.X-1.0

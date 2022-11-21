@@ -1,0 +1,103 @@
+<?php
+/**
+ * @file
+ * This module holds functions for entity events.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Component\EventDispatcher\Event;
+use Drupal\zscaler_custom\Event\ZscalerEvent;
+use Drupal\Core\Mail\MailManagerInterface;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Component\Utility\Html;
+
+/**
+*
+* hook_help()
+*/
+function zscaler_custom_help($route_name) {
+  $help = '';
+  switch($route_name){
+    case 'help.page.zscaler_custom':
+      $help = 'Custom coding';      
+      return $help;
+  }  
+}
+
+/**
+ * Implements hook_entity_insert().
+ *
+ * {@inheritdoc}
+ */
+function zscaler_custom_entity_insert(EntityInterface $entity) {
+  if($entity->bundle() == 'zscaler'){
+    // Instantiate our event.
+    $event = new ZscalerEvent($entity);
+    _zscaler_custom_event_dispatch(ZscalerEvent::INSERT, $event);
+  }
+   
+}
+
+/**
+ * Implements hook_entity_update().
+ *
+ * { @inheritdoc }
+ */
+function zscaler_custom_entity_update(EntityInterface $entity) {
+  if($entity->bundle() == 'zscaler'){
+    // Instantiate our event.
+    $event = new ZscalerEvent($entity);
+    _zscaler_custom_event_dispatch(ZscalerEvent::UPDATE, $event);
+  }  
+}
+
+/**
+ * Implements hook_entity_presave().
+ *
+ * { @inheritdoc }
+ */
+function zscaler_custom_entity_presave(EntityInterface $entity) {
+}
+
+/**
+ * Implements hook_entity_delete().
+ *
+ * {@inheritdoc}
+ */
+function zscaler_custom_entity_delete(EntityInterface $entity) {
+  if($entity->bundle() == 'zscaler'){
+    // Instantiate our event.
+    $event = new ZscalerEvent($entity);
+    _zscaler_custom_event_dispatch(ZscalerEvent::DELETE, $event);
+  }  
+}
+
+/**
+ * Helper method to dispatch an event.
+ *
+ * @param string $event_type
+ *   The event type.
+ * @param \Drupal\Component\EventDispatcher\Event $event
+ *   The event to dispatch.
+ */
+function _zscaler_custom_event_dispatch($event_type, Event $event) {
+  // Get the event_dispatcher service and dispatch the event.
+  $event_dispatcher = \Drupal::service('event_dispatcher');
+  $event_dispatcher->dispatch($event,$event_type);
+}
+
+/**
+ * Implements hook_mail().
+ */
+function zscaler_custom_mail($key, &$message, $params) {
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+  switch ($key) {
+    case 'node_insert':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('@title', array('@title' => $params['title']), $options);
+      $message['body'][] = Html::escape($params['message']);
+      break;
+  }
+}

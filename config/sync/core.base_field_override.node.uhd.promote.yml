@@ -1,0 +1,22 @@
+uuid: 28f55d06-2ec1-4e8f-9d20-8d27ee075b86
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.uhd
+id: node.uhd.promote
+field_name: promote
+entity_type: node
+bundle: uhd
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

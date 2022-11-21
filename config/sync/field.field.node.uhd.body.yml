@@ -1,0 +1,23 @@
+uuid: 33bfd32e-755c-4f0f-a318-76cec55c5e12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.uhd
+  module:
+    - text
+id: node.uhd.body
+field_name: body
+entity_type: node
+bundle: uhd
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

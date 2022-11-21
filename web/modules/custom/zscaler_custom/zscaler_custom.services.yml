@@ -1,0 +1,5 @@
+services:
+  zscaler_custom_event_subscriber:
+    class: '\Drupal\zscaler_custom\EventSubscriber\ZscalerEventSubscriber'
+    tags:
+      - { name: 'event_subscriber' }

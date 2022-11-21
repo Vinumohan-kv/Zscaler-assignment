@@ -1,10 +1,10 @@
 _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
-uuid: 1440e983-04d7-415e-942d-27a37e7e5f65
+uuid: ac064ad9-9ce3-4cba-b995-9d3f36fd47a6
 name: Zscaler
 mail: zsc@norepy.com
-slogan: ''
+slogan: UHD
 page:
   403: ''
   404: ''

@@ -1,0 +1,28 @@
+uuid: eb61fe40-63fd-40a2-8ca9-76339009ebbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.zscaler.body
+    - node.type.zscaler
+  module:
+    - text
+    - user
+id: node.zscaler.default
+targetEntityType: node
+bundle: zscaler
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

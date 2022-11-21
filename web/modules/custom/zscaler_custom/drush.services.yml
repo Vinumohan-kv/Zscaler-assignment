@@ -1,0 +1,6 @@
+services:
+  zscaler_custom.commands:
+    class: Drupal\zscaler_custom\Commands\ZscDrushCommands
+    tags:
+      - { name: drush.command }
+    arguments: ['@database', '@entity_type.manager']
