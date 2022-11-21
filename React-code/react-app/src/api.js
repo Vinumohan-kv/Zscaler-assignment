@@ -17,7 +17,7 @@ const api = {
         'url': endPoint,
         transformResponse:[function (data){
             const json = JSON.parse(data);
-            console.log('in api');
+            //console.log('in api');
             return json.data? json.data: {};
         }],
     }),
